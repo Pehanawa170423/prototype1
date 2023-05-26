@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPT-3.5 Query</title>
+</head>
+<body>
+    <h1>GPT-3.5 Query</h1>
+    <form action="/query" method="post">
+        <label for="prompt">Enter a prompt:</label>
+        <br>
+        <textarea name="prompt" rows="5" cols="40"></textarea>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    {% if prompt %}
+        <h2>Prompt:</h2>
+        <p>{{ prompt }}</p>
+        {% if generated_text %}
+            <h2>Generated Text:</h2>
+            <p>{{ generated_text }}</p>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
