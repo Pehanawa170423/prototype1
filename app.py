@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 import openai
 
 app = Flask(__name__)
-openai.api_key = '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'  # Replace with your OpenAI API key
+openai.api_key = ''  # Replace with your OpenAI API key
 
 @app.route('/fashion-combination', methods=['POST'])
 def get_fashion_combination():
